@@ -1,0 +1,103 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ccf793b7ca1cc645b9cd36d753b8e3c, type: 3}
+  m_Name: MondayGQ
+  m_EditorClassIdentifier: 
+  url: https://api.monday.com/v2
+  queries: []
+  mutations:
+  - name: CreateItem
+    type: 1
+    query: "mutation CreateItem{\n    create_item{\n        id\n    }\n}"
+    queryString: create_item
+    returnType: Item
+    queryOptions:
+    - add_file_to_column
+    - add_file_to_update
+    - add_subscribers_to_board
+    - add_teams_to_workspace
+    - add_users_to_workspace
+    - archive_board
+    - archive_group
+    - archive_item
+    - change_column_title
+    - change_column_value
+    - change_multiple_column_values
+    - change_simple_column_value
+    - clear_item_updates
+    - complexity
+    - create_board
+    - create_column
+    - create_group
+    - create_item
+    - create_notification
+    - create_or_get_tag
+    - create_subitem
+    - create_update
+    - create_webhook
+    - create_workspace
+    - delete_group
+    - delete_item
+    - delete_subscribers_from_board
+    - delete_teams_from_workspace
+    - delete_update
+    - delete_users_from_workspace
+    - delete_webhook
+    - duplicate_board
+    - duplicate_group
+    - duplicate_item
+    - like_update
+    - move_item_to_group
+    - remove_mock_app_subscription
+    - set_mock_app_subscription
+    - update_board
+    fields:
+    - index: 7
+      name: id
+      type: ID
+      parentIndexes: 
+      hasSubField: 0
+      possibleFields:
+      - name: assets
+        type: Asset
+      - name: board
+        type: Board
+      - name: column_values
+        type: ColumnValue
+      - name: created_at
+        type: Date
+      - name: creator
+        type: User
+      - name: creator_id
+        type: String
+      - name: group
+        type: Group
+      - name: id
+        type: ID
+      - name: name
+        type: String
+      - name: parent_item
+        type: Item
+      - name: state
+        type: State
+      - name: subitems
+        type: Item
+      - name: subscribers
+        type: User
+      - name: updated_at
+        type: Date
+      - name: updates
+        type: Update
+      hasChanged: 0
+    isComplete: 1
+  subscriptions: []
+  loading: 0
